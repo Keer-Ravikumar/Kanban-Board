@@ -1,7 +1,7 @@
 function Button(props){
 
     return (
-        <button className="button-class">{props.nameProp}</button>
+        <button onClick={props.onClick} className="button-class">{props.nameProp}</button>
     )
 
 

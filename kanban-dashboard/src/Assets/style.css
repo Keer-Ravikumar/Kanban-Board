@@ -6,22 +6,11 @@
     --bg-color: #18181B;
     --card-bg: #262630;
     --text-color: #F5F5F4;
-    --secondary-text: #B5A8C5;
-
-    /* Button Colors */
-    --btn-primary-bg: #9C5773;
-    --btn-primary-hover: #D66B82;
-    --btn-primary-text: #FFF5F7;
-
-    --btn-delete-bg: #3B1F25;
-    --btn-delete-hover: #A8444E;
-    --btn-delete-text: #F95E6A;
 
     --btn-arrow-bg: #2C2B2E;
     --btn-arrow-hover: #494858;
     --btn-arrow-text: #B5A8C5;
 
-    /* Input */
     --input-bg: #2E2E3A;
     --input-border: #A1869E;
 }
@@ -62,7 +51,7 @@
     margin: 1rem 0rem;
     border: var(--input-border) solid 0.1rem;
     font-size: 1.25rem;
-    width: 100%;
+    width: 200%;
     background-color: var(--input-bg);
 }
 
