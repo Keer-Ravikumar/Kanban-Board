@@ -117,3 +117,43 @@
     background-color:  var(--card-bg);
 }
 
+.blinking-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 1315px) {
+
+    *{
+        font-size: 90%;
+    }
+
+    .input-group{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .add-task{
+        margin: 1rem;
+    }
+
+    .taskInputField{
+        width: 80vw;
+    }
+
+    .tasks-container{
+        flex-direction: column;
+    }
+}
