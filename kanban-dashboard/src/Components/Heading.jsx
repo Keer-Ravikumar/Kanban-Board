@@ -1,7 +1,7 @@
 function Heading(){
 
     return (
-        <h2 className="heading">Todo List</h2>
+        <h2 className="heading">Just Do It...!</h2>
     )
 }
 

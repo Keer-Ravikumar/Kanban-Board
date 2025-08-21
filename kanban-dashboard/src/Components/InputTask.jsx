@@ -1,7 +1,7 @@
 import Button from "./Button";
 import {useState} from "react";
 
-function InputTask(props){
+function InputTask(){
 
     const [task, setTask] = useState("");
     const [tasks, setTasks] = useState([]);
@@ -12,8 +12,12 @@ function InputTask(props){
     }
 
     function handleAdd(){
-        setTasks([...tasks, task]);
-        setTask("");
+        if(task){
+            setTasks([...tasks, task]);
+            setTask("");
+        } else {
+            alert("Type in a task!");
+        }
     }
 
     function deleteTask(index){
@@ -42,24 +46,31 @@ function InputTask(props){
     return (
         <div className="inputContainer">
             <div className="input-group">
-                <input type="text" className="taskInputField" onChange={handleInputChange} value={task}/>
+                <input type="text" placeholder="Add a Task.." className="taskInputField" onChange={handleInputChange} value={task}/>
                 <Button 
+                    className = "add-task"
                     onClick = {handleAdd}
-                    nameProp="➕"
+                    nameProp="I got this 💪🏻"
                 />
             </div>
-                <ul>
+            <ul>
                     {tasks.map( (task, index) => (
                     <div className="tasks-container">
                         <li className="listItem" key={index}> {task} </li> 
                         <div className="button-group">
-                            <Button nameProp = "❌" onClick={ () => deleteTask(index) }/>
+                            {/* <Button nameProp = "✅" onClick={ () => doneTask(task) }/> */}
                             <Button nameProp = "⬆️" onClick={ () => moveUp(index) }/>
                             <Button nameProp = "⬇️" onClick={ () => moveDown(index) }/>
+                            <Button nameProp = "🗑️" onClick={ () => deleteTask(index) }/>
                         </div>
                     </div> 
                     ) ) }
                 </ul>
+                
+
+                {/* TODO Add button group as another component - Not required because not resused anywhere
+                    TODO Add a local Storage  
+                    TODO Change the UI*/}
                 
         </div>
     )
