@@ -46,7 +46,7 @@ function InputTask(){
     return (
         <div className="inputContainer">
             <div className="input-group">
-                <input type="text" placeholder="Add a Task.." className="taskInputField" onChange={handleInputChange} value={task}/>
+                <input type="text" placeholder="Add a Task" className="taskInputField" onChange={handleInputChange} value={task}/>
                 <Button 
                     className = "add-task"
                     onClick = {handleAdd}
